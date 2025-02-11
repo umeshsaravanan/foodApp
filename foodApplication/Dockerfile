@@ -1,14 +1,14 @@
-# Use an official OpenJDK runtime as a parent image
-FROM openjdk:17
+# Use Tomcat as the base image
+FROM tomcat:9.0-jdk17
 
-# Set the working directory inside the container
-WORKDIR /app
+# Set working directory inside the container
+WORKDIR /usr/local/tomcat/webapps/
 
-# Copy the built WAR file into the container
-COPY target/yourapp.war /app/yourapp.war
+# Copy the built WAR file into Tomcat's webapps directory
+COPY target/foodApplication.war /usr/local/tomcat/webapps/foodApplication.war
 
 # Expose port 8080
 EXPOSE 8080
 
-# Run the application
-CMD ["java", "-jar", "/app/yourapp.war"]
+# Start Tomcat
+CMD ["catalina.sh", "run"]
