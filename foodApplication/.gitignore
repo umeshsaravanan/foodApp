@@ -1,0 +1,12 @@
+# Ignore Eclipse specific files
+.settings/
+.project
+.classpath
+
+# Ignore build files
+target/
+build/
+
+# Ignore temporary files
+*.log
+*.tmp
