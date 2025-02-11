@@ -5,7 +5,7 @@ FROM tomcat:9.0-jdk17
 WORKDIR /usr/local/tomcat/webapps/
 
 # Copy the built WAR file into Tomcat's webapps directory
-COPY target/foodApplication.war /usr/local/tomcat/webapps/foodApplication.war
+COPY foodApplication/target/foodApplication.war /usr/local/tomcat/webapps/foodApplication.war
 
 # Expose port 8080
 EXPOSE 8080
