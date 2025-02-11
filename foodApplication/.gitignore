@@ -4,7 +4,6 @@
 .classpath
 
 # Ignore build files
-target/
 build/
 
 # Ignore temporary files
