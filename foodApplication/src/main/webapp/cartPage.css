@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 .cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    padding: 0 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	padding: 0 2rem;
 }
 
 .cart-header button {
@@ -18,42 +18,42 @@
 	font-size: large;
 }
 
-.cart-header button:hover {	
-    box-shadow: 0px 0px 5px 0px gray;
-    transition: .3s;
+.cart-header button:hover {
+	box-shadow: 0px 0px 5px 0px gray;
+	transition: .3s;
 }
 
-.cart_heading{
+.cart_heading {
 	margin: 10px 0px;
 }
 
-.empty_cart{
+.empty_cart {
 	display: flex;
-	align-items:center;
+	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	gap: 1rem;
 	height: calc(100vh - 80px);
 }
 
-.empty_cart i{
+.empty_cart i {
 	font-size: 5rem;
 	border: 1px solid gray;
 	border-radius: 50%;
 	padding: 3rem;
 }
 
-.empty_cart a{
+.empty_cart a {
 	text-decoration: none;
 	color: black;
 	font-size: 1.25rem;
 }
 
-.empty_cart a:hover{
+.empty_cart a:hover {
 	text-decoration: underline;
 }
 
-.cart_payment{
+.cart_payment {
 	margin-top: 1rem;
 	display: flex;
 	gap: 1rem;
@@ -62,7 +62,7 @@
 	padding: 0 1rem;
 }
 
-.cart_items{
+.cart_items {
 	display: flex;
 	flex-direction: column;
 	width: 80%;
@@ -74,7 +74,7 @@
 	flex: 2;
 }
 
-.cart_item{
+.cart_item {
 	padding: 0 4rem;
 	display: flex;
 	align-items: center;
@@ -88,12 +88,12 @@
 }
 
 .cart_item:hover {
-    transition: .3s ease-in-out;
-    scale: 1.01;
-    box-shadow: 0px 0px 15px 0px rgb(179, 196, 196);
+	transition: .3s ease-in-out;
+	scale: 1.01;
+	box-shadow: 0px 0px 15px 0px rgb(179, 196, 196);
 }
 
-.item_details{
+.item_details {
 	display: flex;
 	flex-direction: column;
 	gap: .5rem;
@@ -101,12 +101,12 @@
 
 .item_name {
 	display: flex;
-	align-items:center;
-	justify-content: start;		
+	align-items: center;
+	justify-content: start;
 	gap: .5rem;
 }
 
-.item_details i{
+.item_details i {
 	border: 1px solid;
 	padding: 2px;
 	width: 1.4rem;
@@ -116,13 +116,13 @@
 	position: relative;
 }
 
-.item_img img{
+.item_img img {
 	width: 100px;
 	height: 100px;
 	border-radius: 8px;
 }
 
-.item_img .inc_dec{
+.item_img .inc_dec {
 	display: flex;
 	width: 80px;
 	height: 2rem;
@@ -138,7 +138,7 @@
 	border: 1px solid rgb(179, 196, 196);
 }
 
-.inc_dec button{
+.inc_dec button {
 	border: none;
 	color: green;
 	font-weight: bolder;
@@ -146,7 +146,7 @@
 	background-color: transparent;
 }
 
-.item_img .inc_dec:hover{
+.item_img .inc_dec:hover {
 	background-color: rgb(226, 226, 226);
 	transition: .2s;
 }
@@ -156,48 +156,48 @@
 	font-size: larger;
 }
 
-.action_btn{
+.action_btn {
 	font-size: 1.25rem;
 }
 
-.inc_dec button{
+.inc_dec button {
 	padding: 2px;
 	width: 20px;
-	height:20px;
+	height: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 .counter-controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 .counter-controls button {
-    padding: 5px 10px;
+	padding: 5px 10px;
 }
 
 .counter {
-    font-weight: bold;
-    min-width: 20px;
-    text-align: center;
+	font-weight: bold;
+	min-width: 20px;
+	text-align: center;
 }
 
-.payment_section{
+.payment_section {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
 	flex: 1;
-	padding: 1rem;	
+	padding: 1rem;
 	border: 1px solid rgb(179, 196, 196);
-    box-shadow: 0px 0px 15px 0px rgb(179, 196, 196);
+	box-shadow: 0px 0px 15px 0px rgb(179, 196, 196);
 	border-radius: 4px;
 	margin-top: 40px;
 }
 
-.payment_section button{
+.payment_section button {
 	outline: none;
 	border: 1px solid red;
 	background-color: red;
@@ -207,7 +207,7 @@
 	cursor: pointer;
 }
 
-.payment_section button:hover{
+.payment_section button:hover {
 	background-color: rgb(247, 43, 43);
 }
 
@@ -217,19 +217,19 @@
 	gap: .5rem;
 }
 
-.delete{
+.delete {
 	position: absolute;
 	bottom: 2rem;
 	padding: .5rem;
-	cursor: pointer;	
+	cursor: pointer;
 	color: black;
 }
 
-.delete:hover{
+.delete:hover {
 	color: rgb(254, 58, 58);
 }
 
-.choosePayment{
+.choosePayment {
 	display: flex;
 	gap: 1rem;
 	align-items: center;
@@ -239,28 +239,24 @@
 	padding: 4px 8px;
 }
 
-@media (max-width: 480px) {
-	.cart_items{
+@media ( max-width : 480px) {
+	.cart_items {
 		width: 100%;
 	}
-	
 	.cart_item {
 		width: 100%;
 	}
-	
 	.item_name, .item_desc, .cart-header button {
 		font-size: small;
 	}
-	.item_details i{
+	.item_details i {
 		padding: 1px;
 		width: 1.1rem;
 	}
-
-	.cart_payment{
+	.cart_payment {
 		flex-direction: column;
 	}
-	
-	.payment_section{
+	.payment_section {
 		width: 100%
 	}
 }

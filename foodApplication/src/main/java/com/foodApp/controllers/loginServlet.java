@@ -2,16 +2,16 @@ package com.foodApp.controllers;
 
 import java.io.IOException;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import com.foodApp.DAOImplementation.UserDAOImpl;
 import com.foodApp.models.User;
 import com.foodApp.secure.MyEncrypt;
-
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/loginServlet")
 public class loginServlet extends HttpServlet {
@@ -35,11 +35,11 @@ public class loginServlet extends HttpServlet {
 				idCookie.setMaxAge(86400);
 				response.addCookie(nameCookie);
 				response.addCookie(idCookie);
-				if ((Boolean) request.getSession().getAttribute("fromConfirmOrder")) {
+				Object fromConfirmPage = request.getSession().getAttribute("fromConfirmOrder");
+				if (fromConfirmPage != null && (Boolean) fromConfirmPage) {
 					request.getSession().setAttribute("fromConfirmOrder", false);
 					request.getRequestDispatcher("cartPage.jsp").forward(request, response);
 				} else {
-					System.out.println("else");
 					response.sendRedirect("HomeServlet");
 				}
 			} else {

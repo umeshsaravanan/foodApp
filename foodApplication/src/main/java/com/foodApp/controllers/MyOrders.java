@@ -5,6 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import com.foodApp.DAOImplementation.MenuDAOImpl;
 import com.foodApp.DAOImplementation.OrderItemDAOImpl;
 import com.foodApp.DAOImplementation.OrdersDAOImpl;
@@ -13,12 +19,6 @@ import com.foodApp.models.Menu;
 import com.foodApp.models.OrderItem;
 import com.foodApp.models.Orders;
 import com.foodApp.models.Restaurant;
-
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/MyOrders")
 public class MyOrders extends HttpServlet {

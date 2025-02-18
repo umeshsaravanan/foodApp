@@ -1,154 +1,152 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 .nav {
-    position: sticky;
-    top: 0;
-    display: flex;
-    height: 80px;
-    background-color: rgb(179, 196, 196);
-    align-items: center;
-    justify-content: space-between;
-    padding: .5rem 2rem;
-    z-index: 10;
+	position: sticky;
+	top: 0;
+	display: flex;
+	height: 80px;
+	background-color: rgb(179, 196, 196);
+	align-items: center;
+	justify-content: space-between;
+	padding: .5rem 2rem;
+	z-index: 10;
 }
 
 strong {
-    font-size: xx-large;
-    font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: xx-large;
+	font-weight: bold;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .left {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    flex: 1;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	flex: 1;
 }
 
 .app_name {
-    flex: 1;
+	flex: 1;
 }
 
 .app_name a {
-    text-decoration: none;
-    color: black;	
+	text-decoration: none;
+	color: black;
 }
 
 .search_div {
-    flex: 2;
+	flex: 2;
 }
 
 .search {
-    width: 100%;
-    border-radius: 4px;
-    border: none;
-    height: 2rem;
-    font-size: 1rem;
+	width: 100%;
+	border-radius: 4px;
+	border: none;
+	height: 2rem;
+	font-size: 1rem;
 }
 
 .search:focus {
-    outline: none;
+	outline: none;
 }
 
 .right {
-    flex: 1;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: end;
+	flex: 1;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: end;
 }
 
-.right a{
-    text-decoration: none;
-    color: black;
-    font-size: 25px;
+.right a {
+	text-decoration: none;
+	color: black;
+	font-size: 25px;
 }
 
 .right .buttons {
-    display: flex;
-    gap: 1rem;
+	display: flex;
+	gap: 1rem;
 }
 
 .right .links {
-    background-color: transparent;
-    border: none;
-    font-size: 1.25rem;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
+	background-color: transparent;
+	border: none;
+	font-size: 1.25rem;
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
 }
 
 .right .links:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .right .profile {
-    display: flex;
-    gap: .5rem;
-    align-items: center;
+	display: flex;
+	gap: .5rem;
+	align-items: center;
 }
 
 .right .profile img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
 }
 
 .right .profile p {
-    font-size: 1.5rem;
-    font-weight: lighter;
+	font-size: 1.5rem;
+	font-weight: lighter;
 }
 
 .right .profile p i {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .drop_down {
-    border-radius: 4px;
-    background-color: rgb(228, 226, 226);
-    position: fixed;
-    right: 1rem;
-    top: 4rem;
-    display: none;
-    flex-direction: column;
-    z-index: 10;
+	border-radius: 4px;
+	background-color: rgb(228, 226, 226);
+	position: fixed;
+	right: 1rem;
+	top: 4rem;
+	display: none;
+	flex-direction: column;
+	z-index: 10;
 }
 
 .drop_down a {
-    padding: 1rem 4rem;
-    font-size: 1.25rem;
-    border-bottom: 1px solid rgb(127, 127, 127);
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
+	padding: 1rem 4rem;
+	font-size: 1.25rem;
+	border-bottom: 1px solid rgb(127, 127, 127);
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
 }
 
 .drop_down a:hover {
-    background-color: rgb(179, 196, 196);
+	background-color: rgb(179, 196, 196);
 }
 
 .hide {
 	display: none;
 }
 
-@media (max-width: 480px) {
-	
-	.nav{
+@media ( max-width : 480px) {
+	.nav {
 		padding: .5rem .5rem;
 	}
-    .right .buttons .links{
-    	font-size: 18px;
-    }
-    .left .search_div, .prof_name {
-        display: none;
-    }
-    
-    .drop_down p {
-        font-size: initial;
-        padding: .5rem 2rem;
-    }
+	.right .buttons .links {
+		font-size: 18px;
+	}
+	.left .search_div, .prof_name {
+		display: none;
+	}
+	.drop_down p {
+		font-size: initial;
+		padding: .5rem 2rem;
+	}
 }

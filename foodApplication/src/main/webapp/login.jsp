@@ -1,8 +1,8 @@
-<%@page import="jakarta.servlet.http.Cookie"%>
-<%@page import="jakarta.servlet.http.HttpSession"%>
-<%@page import="jakarta.servlet.http.HttpServletResponse"%>
+<%@page import="javax.servlet.http.Cookie"%>
+<%@page import="javax.servlet.http.HttpSession"%>
+<%@page import="javax.servlet.http.HttpServletResponse"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%
     // Prevent browser caching
     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
@@ -38,29 +38,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
-    <div class="login-container">
-        <form action="loginServlet" method="post" class="login-form">
-            <h2>Login</h2>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="login-btn">Login</button>
-            </div>
-            
-            <p>Don't have an Account? <a href="register.jsp">Register Here</a></p>
-        </form>
-    </div>
+	<div class="login-container">
+		<form action="loginServlet" method="post" class="login-form">
+			<h2>Login</h2>
+			<div class="form-group">
+				<label for="username">Username</label> <input type="text"
+					id="username" name="username" placeholder="Enter your username"
+					required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label> <input type="password"
+					id="password" name="password" placeholder="Enter your password"
+					required>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="login-btn">Login</button>
+			</div>
+
+			<p>
+				Don't have an Account? <a href="register.jsp">Register Here</a>
+			</p>
+		</form>
+	</div>
 </body>
 </html>
