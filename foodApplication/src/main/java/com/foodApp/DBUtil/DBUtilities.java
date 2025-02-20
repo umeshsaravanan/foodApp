@@ -10,6 +10,10 @@ import java.sql.Statement;
 public class DBUtilities {
 
 	static Connection connection;
+	// Fetch database details from environment variables
+	static String dbUrl = System.getenv("DATABASE_URL");
+	static String dbUser = System.getenv("DATABASE_USER");
+	static String dbPassword = System.getenv("DATABASE_PASSWORD");
 
 	static {
 		try {
@@ -23,7 +27,7 @@ public class DBUtilities {
 
 	public static Connection getConnection() {
 		try {
-			connection = DriverManager.getConnection("JDBC:mysql://localhost:3306/foodapp", "root", "root");
+			connection = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
 			return connection;
 		} catch (SQLException e) {
 			e.printStackTrace();
