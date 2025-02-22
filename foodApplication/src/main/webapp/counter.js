@@ -7,7 +7,7 @@ function handleAdd(button, id) {
     const counter = counterControls.querySelector('.counter');
     counter.textContent = '1';
 
-    fetch('http://localhost:8080/foodApplication/AddToCartServlet', {
+    fetch('https://foodapp-yl5h.onrender.com/foodApplication/AddToCartServlet', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -43,7 +43,7 @@ function updateCounter(button, increment, id, flag) {
         counter.textContent = currentValue;
     }
 
-    fetch('http://localhost:8080/foodApplication/AddToCartServlet', {
+    fetch('https://foodapp-yl5h.onrender.com/foodApplication/AddToCartServlet', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -159,7 +159,7 @@ function removeItemFromUI(id, itemName) {
 }
 
 function deleteItem(id, name) {
-    fetch('http://localhost:8080/foodApplication/AddToCartServlet', {
+    fetch('https://foodapp-yl5h.onrender.com/foodApplication/AddToCartServlet', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -182,7 +182,7 @@ function deleteItem(id, name) {
 }
 
 function clearCart(){
-	fetch('http://localhost:8080/foodApplication/AddToCartServlet', {
+	fetch('https://foodapp-yl5h.onrender.com/foodApplication/AddToCartServlet', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -215,7 +215,7 @@ function clearCart(){
 function handleOrder() {
 	let selectedPayment = document.getElementById("payment_method").value;
 	
-    fetch('http://localhost:8080/foodApplication/ConfirmOrder', {
+    fetch('https://foodapp-yl5h.onrender.com/foodApplication/ConfirmOrder', {
         method: 'POST',
 		headers: {
 	        "Content-Type": "application/x-www-form-urlencoded"
@@ -223,10 +223,10 @@ function handleOrder() {
 	    body: "paymentMethod=" + encodeURIComponent(selectedPayment)
     }).then(async (response) => {
 		if (response.redirected) {
-            window.location.href = "http://localhost:8080/foodApplication/login.jsp";
+            window.location.href = "https://foodapp-yl5h.onrender.com/foodApplication/login.jsp";
         }
 		if(await response.text() === "order confirmed"){
-			window.location.href = "http://localhost:8080/foodApplication/cartPage.jsp";
+			window.location.href = "https://foodapp-yl5h.onrender.com/foodApplication/cartPage.jsp";
 		}
 	}).catch(error => console.error("Error:", error));
 }

@@ -17,11 +17,11 @@ public class UserDAOImpl implements UserDAO {
 	private ResultSet resultSet;
 	private static ArrayList<User> studentList = new ArrayList<User>();
 
-	private static String INSERTQUERY = "INSERT INTO USERS (user_name,password,email,address) VALUES(?,?,?,?)";
-	private static String GETALLQUERY = "SELECT * FROM USERS";
-	private static String GETSPECIFICQUERY = "SELECT * FROM USERS WHERE USER_NAME = ?";
-	private static String UPDATEQUERY = "UPDATE USERS SET PASSWORD = ? WHERE USER_ID = ?";
-	private static String DELETEQUERY = "DELETE FROM USERS WHERE USER_ID = ?";
+	private static String INSERTQUERY = "INSERT INTO users (user_name,password,email,address) VALUES(?,?,?,?)";
+	private static String GETALLQUERY = "SELECT * FROM users";
+	private static String GETSPECIFICQUERY = "SELECT * FROM users WHERE USER_NAME = ?";
+	private static String UPDATEQUERY = "UPDATE users SET PASSWORD = ? WHERE USER_ID = ?";
+	private static String DELETEQUERY = "DELETE FROM users WHERE USER_ID = ?";
 
 	static {
 		connection = DBUtilities.getConnection();
