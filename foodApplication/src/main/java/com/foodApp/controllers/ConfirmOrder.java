@@ -45,7 +45,7 @@ public class ConfirmOrder extends HttpServlet {
 
 			int orderId = orders.insert(new Orders(userId, restaurantId, totalAmount, "order placed", paymentMethod));
 			insertIntoOrderItem(cart.getCart(), orderId);
-
+			cart.clear();
 			request.getSession().removeAttribute("cart");
 
 			response.getWriter().write("order confirmed");

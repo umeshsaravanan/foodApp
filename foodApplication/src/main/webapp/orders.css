@@ -25,7 +25,11 @@
 	padding: 20px;
 	background-color: transparent;
 	border-left: 2px solid #ddd;
+}
+
+.orders {
 	overflow: scroll;
+	height: 100%;
 }
 
 .ordersCard {
@@ -99,6 +103,7 @@
 		flex-direction: column;
 		justify-content: initial;
 		gap: 1rem;
+		padding: 0px;
 	}
 	
 	.left-section, .right-section {
@@ -107,5 +112,13 @@
 	
 	.right-section {
 		border-left: none;
+	}
+	
+	.order-heading {
+		margin-bottom: .5rem;
+	}
+	.orders {
+		height: min-content;
+		overflow: initial;
 	}
 }

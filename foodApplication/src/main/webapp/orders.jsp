@@ -51,8 +51,9 @@
 		</div>
 
 		<div class="right-section">
-			<h3>Your Orders</h3>
+			<h3 class="order-heading">Your Orders</h3>
 
+			<div class="orders">
 			<% 
 	            List<Orders> orders = (List<Orders>) session.getAttribute("orders");
 	        	if(orders == null){
@@ -91,6 +92,7 @@
 			</div>
 
 			<% } %>
+			</div>
 		</div>
 	</div>
 </body>
