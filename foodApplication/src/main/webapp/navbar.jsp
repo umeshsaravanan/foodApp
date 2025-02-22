@@ -44,7 +44,7 @@
 			</div>
 			<div class="<%= isLoggedIn ? "profile" : "hide" %>" id="drop_click"
 				onclick="handleDropdown()">
-				<img src="umesh.jpg" alt="">
+				<img src="profile.jpg" alt="">
 				<p class="prof_name"><%= session.getAttribute("username") %>
 					<i class="fa-solid fa-caret-down"></i>
 				</p>
