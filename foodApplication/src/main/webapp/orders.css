@@ -97,5 +97,15 @@
 @media ( max-width : 480px) {
 	.content {
 		flex-direction: column;
+		justify-content: initial;
+		gap: 1rem;
+	}
+	
+	.left-section, .right-section {
+		width: 100%;
+	}
+	
+	.right-section {
+		border-left: none;
 	}
 }
