@@ -1,3 +1,4 @@
+<%@page import="java.net.URLDecoder"%>
 <%@page import="javax.servlet.http.Cookie"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -17,7 +18,7 @@
 		if(cookieArray != null)
 	    for (Cookie cookie : cookieArray) {
 	        if (cookie.getName().equals("name")) {
-	            session.setAttribute("username", cookie.getValue());
+	            session.setAttribute("username", URLDecoder.decode(cookie.getValue(), "UTF-8"));
 	            isLoggedIn = true;
 	        }
 	        if (cookie.getName().equals("id")) {
@@ -45,7 +46,7 @@
 			<div class="<%= isLoggedIn ? "profile" : "hide" %>" id="drop_click"
 				onclick="handleDropdown()">
 				<img src="profile.jpg" alt="">
-				<p class="prof_name"><%= session.getAttribute("username") %>
+				<p class="prof_name"><%=  session.getAttribute("username") %>
 					<i class="fa-solid fa-caret-down"></i>
 				</p>
 			</div>

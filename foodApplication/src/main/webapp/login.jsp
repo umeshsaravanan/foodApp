@@ -1,3 +1,4 @@
+<%@page import="java.net.URLDecoder"%>
 <%@page import="javax.servlet.http.Cookie"%>
 <%@page import="javax.servlet.http.HttpSession"%>
 <%@page import="javax.servlet.http.HttpServletResponse"%>
@@ -17,7 +18,7 @@
     for (Cookie cookie : cookieArray) {
         if (cookie.getName().equals("name")) {
             userNameCookie = cookie;
-            session.setAttribute("username", cookie.getValue());
+            session.setAttribute("username", URLDecoder.decode(cookie.getValue(), "UTF-8"));
             isLoggedIn = true;
         }
         if(cookie.getName().equals("id")){

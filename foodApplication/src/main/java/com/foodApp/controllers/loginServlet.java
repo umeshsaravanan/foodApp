@@ -1,6 +1,7 @@
 package com.foodApp.controllers;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,7 +30,7 @@ public class loginServlet extends HttpServlet {
 			if (dbUser.getPassword().equals(MyEncrypt.encrypt(password))) {
 				request.getSession().setAttribute("username", name);
 				request.getSession().setAttribute("userId", dbUser.getUserId());
-				Cookie nameCookie = new Cookie("name", name);
+				Cookie nameCookie = new Cookie("name", URLEncoder.encode(name, "UTF-8"));
 				Cookie idCookie = new Cookie("id", dbUser.getUserId() + "");
 				nameCookie.setMaxAge(86400);
 				idCookie.setMaxAge(86400);
