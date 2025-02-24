@@ -44,7 +44,7 @@
 	.cart_card {
 		width: 80%;
 	}
-	.cart_card p a {
+	.cart_card p a, .cart_card h3 {
 		font-size: small;
 	}
 }

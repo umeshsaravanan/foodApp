@@ -99,6 +99,7 @@
 		<i class="fa-solid fa-cart-shopping"></i>
 		<p>Empty Cart</p>
 		<a href="home.jsp">Start Ordering</a>
+		<a href="MyOrders">Your Orders</a>
 	</div>
 	<%} %>
 	<script type="text/javascript" src="counter.js"></script>
